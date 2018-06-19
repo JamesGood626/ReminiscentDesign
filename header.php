@@ -23,7 +23,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'fiddling' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ReminiscentDesign' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
@@ -35,18 +35,20 @@
 				<?php
 			else :
 				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<!-- displays Site Title found in Settings > General -->
+				<!-- <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p> -->
 				<?php
 			endif;
-			$fiddling_description = get_bloginfo( 'description', 'display' );
-			if ( $fiddling_description || is_customize_preview() ) :
+			$ReminiscentDesign_description = get_bloginfo( 'description', 'display' );
+			if ( $ReminiscentDesign_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $fiddling_description; /* WPCS: xss ok. */ ?></p>
+				<!-- Displays Tagline found in Settings > General -->
+				<!-- <p class="site-description"><?php echo $ReminiscentDesign_description; /* WPCS: xss ok. */ ?></p> -->
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'fiddling' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ReminiscentDesign' ); ?></button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
