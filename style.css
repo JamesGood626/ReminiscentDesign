@@ -1,5 +1,5 @@
 /*!
-Theme Name: Fiddling
+Theme Name: ReminiscentDesign
 Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
@@ -981,4 +981,336 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/******* START OF REMINISCENT DESIGN STYLES *******/
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #FBFCFF;
+}
+
+.logo {
+  position: absolute;
+  top: 1.4rem;
+  left: 1.4rem;
+  height: 3.8rem;
+  width: 3.8rem;
+}
+
+.nav-container {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  height: 6rem;
+  width: 100vw;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 6rem;
+  width: 80%;
+  padding: 0;
+  margin: auto;
+  font-family: 'Roboto Condensed', sans-serif;
+/*   font-family: 'Sree Krushnadevaraya', serif; */
+/*   background: red; */
+}
+
+@media (min-width: 520px) {
+  nav {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  nav {
+    width: 50%;
+  }
+}
+
+.nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  width: 3.4rem;
+  height: 1.8rem;
+  font-size: 1.1rem;
+  text-shadow: 0 0 0.7px, 0 0 0.3px;
+}
+
+.left-link > a {
+  line-height: 1.4rem;
+  color: #f2f2f2;
+}
+
+.right-link > a {
+  line-height: 1.4rem;
+  color: #222;
+}
+
+.nav-link > a {
+  margin: 0;
+  text-decoration: none;
+}
+/* .animated {
+	width: 300px;
+	padding: 40px 0;
+	font: bold 46px sans-serif;
+	text-align: center;
+  background: #f5d8f4;
+  border: 2px solid orchid;
+  -webkit-animation: test 4s infinite;
+  animation: test 4s infinite;
+}
+@-webkit-keyframes test {
+    50% {border-bottom: 20px solid indigo;}
+}
+@keyframes test {
+    50% {border-bottom: 20px solid indigo;}
+} */
+
+/* #active-link > a {
+  color: #fff;
+  text-shadow: 0 0 5px black;
+} */
+
+/* #active-link > a::before {
+  content: "";
+  display: block;
+  height: 0.2vh;
+  box-shadow: 0 22px 40px black;
+} */
+
+section {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  height: 100%;
+  width: 100%;
+/*   background: blue; */
+}
+
+h1::after {
+  content: "Reminiscent";
+  display: flex;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: calc(100% - 90vw);
+  margin: 0;
+  height: 24rem;
+  width: 60vw;
+  letter-spacing: 0.4rem;
+  color: #fff;
+  text-shadow: 0 0 6px, 0 0 3px;
+  font-size: 2.4rem;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+/*   sidewaysversion */
+/*   clip-path: polygon(0 0, 0 100%, calc(100% + 11.7vw) 100%, calc(100% - 38.3vw) 0); */
+  clip-path: polygon(0, 0 100%, 50% 100%, 50% 0);
+/*   background: limegreen; */
+}
+
+/* h1::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: limegreen;
+  z-index: -102;
+  height: 100vh;
+  width: 24rem;
+  color: #aaa;
+} */
+
+.heading-container {
+  margin: auto;
+  width: 60%;
+/*   height: 50vh; */
+/*   background: blue; */
+}
+
+.layout-header::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -10;
+  height: 100vh;
+  width: 100vw;
+  clip-path: polygon(0 0, 0 100%, 50% 100%, 50% 0);
+/*   sidewaysversion
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 22.5% 0); */
+  background: black;
+}
+
+/* .layout-header::before {
+  content: attr(data-title);
+  display: flex;
+  margin: auto;
+  position: absolute;
+  z-index: 12;
+  top: 0;
+  left: 0;
+  height: 24rem;
+  width: 60vw;
+  letter-spacing: 0.4rem;
+  color: #fff;
+  font-size: 2.4rem;
+  clip-path: polygon(0 0, 0 100%, 100vw 100%, calc(100vw - 85%) 0);
+  background: limegreen;
+} */
+
+h1 {
+  position: absolute;
+  top: calc(50% - 16rem);
+  font-family: 'Comfortaa', cursive;
+  font-size: 2.4rem;
+  font-weight: 700;
+  height: 7rem;
+  width: 60vw;
+  line-height: 3.2rem;
+  letter-spacing: 0.4rem;
+  color: black;
+  text-shadow: 0 0 4px, 0 0 2px;
+}
+
+.header-text {
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  width: 26rem;
+  line-height: 1.4rem;
+  color: #aaa;
+  font-family: 'Roboto Condensed', sans-serif;
+  visibility: hidden;
+/*   font-family: 'Sree Krushnadevaraya', serif; */
+}
+
+
+.reminiscent-text {
+  visibility: hidden;
+}
+
+.design-text {
+  position: absolute;
+  top: 130%;
+/*   To align with top of Reminiscent */
+/*   top: 66%; */
+  left: calc(100% - 30vw);
+  writing-mode: vertical-lr;
+}
+
+/* .header-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  width: 14rem;
+  font-family: 'Roboto Condensed', sans-serif;
+} */
+
+/******* MESSING WITH THE ANIMATED SVG BORDER **********/
+.svg-wrapper {
+  width: 100%;
+  max-width: 20rem;
+  margin: 0 auto;
+  transform: translateY(15rem);
+}
+.svg-outline {
+  transform: translateY(2.6rem);
+  height: 6rem;
+  width: 12rem;
+}
+.shape {
+  stroke-dasharray: 120 160;
+  stroke-dashoffset: 20%;
+/*   stroke-dasharray: 90 340;
+  stroke-dashoffset: 40%; */
+  height: 60;
+  width: 12rem;
+  stroke-width: 4px;
+  fill: transparent;
+  stroke: #19f6e8;
+/*   transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s; */
+}
+
+.svg-wrapper:hover .shape {
+  -webkit-animation: test 0.5s infinite;
+  animation: test 0.5s infinite;
+}
+
+@-webkit-keyframes test {
+    0% {stroke-dashoffset: 20%}
+}
+@keyframes test {
+    100% {stroke-dashoffset: 180%}
+}
+
+@media (min-width: 420px) {
+  .svg-outline {
+    width: 14rem;
+  }
+
+  .shape {
+    width: 14rem;
+  }
+}
+/* .shape2 {
+  stroke-dasharray: 180 200;
+  stroke-dashoffset: 10%;
+  stroke-width: 4px;
+  fill: transparent;
+  stroke: #19f6e8;
+  border-bottom: 4px solid black;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+} */
+.button-text {
+  font-family: 'Roboto Condensed';
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 8px;
+  color: lightblue;
+  top: -48px;
+  position: relative;
+  padding: 0.4rem 0;
+}
+.button-text::before {
+  content: 'Learn';
+  display: inline-block;
+  margin-right: 0.4rem;
+  color: #f2f2f2;
+  text-shadow: 0 0 0.7px, 0 0 0.3px;
+}
+.button-text::after {
+  content: 'More';
+  display: inline-block;
+  margin-left: 0.4rem;
+  color: #222;
+  text-shadow: 0 0 0.7px, 0 0 0.3px;
+}
+/* .svg-wrapper:hover .shape {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
+} */
+.visually-hidden {
+  display: none;
 }
