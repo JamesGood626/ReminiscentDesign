@@ -28,10 +28,10 @@
 	<header>
 		<div class="nav-container">
 	      <nav>
-	        <span id="active-link" class="nav-link left-link"><a href="#">Home</a></span>
-	        <span class="nav-link left-link"><a href="#">About</a></span>
-	        <span class="nav-link right-link"><a href="#">Work</a></span>
-	        <span class="nav-link right-link"><a href="#">Contact</a></span>
+	        <span id="active-link" class="nav-link left-link"><a href="/">Home</a></span>
+	        <span class="nav-link left-link"><a href="/about">About</a></span>
+	        <span class="nav-link right-link"><a href="/work">Work</a></span>
+	        <span class="nav-link right-link"><a href="/contact">Contact</a></span>
 	      </nav>
 	    </div>
 	</header><!-- #masthead -->
