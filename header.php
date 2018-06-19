@@ -25,37 +25,16 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ReminiscentDesign' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<!-- displays Site Title found in Settings > General -->
-				<!-- <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p> -->
-				<?php
-			endif;
-			$ReminiscentDesign_description = get_bloginfo( 'description', 'display' );
-			if ( $ReminiscentDesign_description || is_customize_preview() ) :
-				?>
-				<!-- Displays Tagline found in Settings > General -->
-				<!-- <p class="site-description"><?php echo $ReminiscentDesign_description; /* WPCS: xss ok. */ ?></p> -->
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ReminiscentDesign' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+	<header>
+		<div class="nav-container">
+	      <nav>
+	        <span id="active-link" class="nav-link left-link"><a href="#">Home</a></span>
+	        <span class="nav-link left-link"><a href="#">About</a></span>
+	        <span class="nav-link right-link"><a href="#">Work</a></span>
+	        <span class="nav-link right-link"><a href="#">Contact</a></span>
+	      </nav>
+	    </div>
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<!-- <div id="content" class="site-content"> -->
+	<main class="layout-main">
