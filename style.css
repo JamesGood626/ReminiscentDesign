@@ -990,7 +990,17 @@ object {
 	display: block;
 }
 
-/******* START OF REMINISCENT DESIGN STYLES *******/
+
+
+
+
+
+
+/*********************************
+
+	START OF REMINISCENT DESIGN STYLES 
+	
+**********************************/
 
 body {
   margin: 0;
@@ -998,14 +1008,6 @@ body {
   overflow-x: hidden;
   text-align: center;
 }
-
-/* header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  background: #FBFCFF;
-} */
 
 .logo {
   position: absolute;
@@ -1033,7 +1035,6 @@ nav {
   margin: auto;
   font-family: 'Roboto Condensed', sans-serif;
 /*   font-family: 'Sree Krushnadevaraya', serif; */
-/*   background: red; */
 }
 
 @media (min-width: 520px) {
@@ -1073,34 +1074,220 @@ nav {
   margin: 0;
   text-decoration: none;
 }
-/* .animated {
-	width: 300px;
-	padding: 40px 0;
-	font: bold 46px sans-serif;
-	text-align: center;
-  background: #f5d8f4;
-  border: 2px solid orchid;
-  -webkit-animation: test 4s infinite;
-  animation: test 4s infinite;
-}
-@-webkit-keyframes test {
-    50% {border-bottom: 20px solid indigo;}
-}
-@keyframes test {
-    50% {border-bottom: 20px solid indigo;}
-} */
 
-/* #active-link > a {
-  color: #fff;
-  text-shadow: 0 0 5px black;
-} */
 
-/* #active-link > a::before {
-  content: "";
+
+
+
+/********* LINK ACTIVE STYLES ***********/
+/* applying the id dynamically when active overwrites transition styles */
+
+
+
+#home-link-is-active {
+  position: relative;
+}
+
+#home-link-is-active::before {
+  content: 'Home';
   display: block;
-  height: 0.2vh;
-  box-shadow: 0 22px 40px black;
-} */
+  position: absolute;
+  top: -0.14rem;
+  left: -0.24rem;
+  z-index: 40;
+  height: 1.5rem;
+	width: 3rem;
+	font-size: 1.1rem;
+  line-height: 1.5rem;
+  color: #222;
+  background: #fff;
+  overflow: hidden;
+}
+
+#about-link-is-active {
+  position: relative;
+}
+
+#about-link-is-active::before {
+  content: 'About';
+  display: block;
+  position: absolute;
+  top: -0.14rem;
+  left: -0.24rem;
+  z-index: 40;
+  height: 1.5rem;
+	width: 3rem;
+	font-size: 1.1rem;
+  line-height: 1.5rem;
+  color: #222;
+  background: #fff;
+  overflow: hidden;
+}
+
+#blog-link-is-active {
+  position: relative;
+}
+
+#blog-link-is-active::before {
+  content: 'Blog';
+  display: block;
+  position: absolute;
+  top: -0.14rem;
+  left: -0.24rem;
+  z-index: 40;
+  height: 1.6rem;
+	width: 2.8rem;
+	font-size: 1.1rem;
+  line-height: 1.6rem;
+  color: #fff;
+  background: #222;
+  overflow: hidden;
+}
+
+#contact-link-is-active {
+  position: relative;
+}
+
+#contact-link-is-active::before {
+  content: 'Contact';
+  display: block;
+  position: absolute;
+  top: -0.14rem;
+  left: -0.24rem;
+  z-index: 40;
+  height: 1.5rem;
+	width: 4rem;
+	font-size: 1.1rem;
+  line-height: 1.5rem;
+  color: #fff;
+  background: #222;
+  overflow: hidden;
+}
+
+
+
+/********** END LINK ACTIVE STYLES ***********/
+
+
+
+
+
+
+
+
+/********** LINK HOVER STATES ***********/
+
+
+
+.home-link-hover-transition {
+  position: relative;
+}
+
+.home-link-hover-transition::before {
+  content: 'Home';
+  display: block;
+  position: absolute;
+  top: -0.14rem;
+  left: -0.24rem;
+  z-index: 40;
+  height: 0rem;
+	width: 3rem;
+	font-size: 1.1rem;
+  line-height: 1.6rem;
+  color: #222;
+  background: #fff;
+  overflow: hidden;
+  transition: height 0.4s;
+}
+
+.home-link-hover-transition:hover::before {
+  height: 1.5rem;
+}
+
+.about-link-hover-transition {
+  position: relative;
+}
+
+.about-link-hover-transition::before {
+  content: 'About';
+  display: block;
+  position: absolute;
+  top: -0.14rem;
+  left: -0.24rem;
+  z-index: 40;
+  height: 0rem;
+	width: 3rem;
+	font-size: 1.1rem;
+  line-height: 1.6rem;
+  color: #222;
+  background: #fff;
+  overflow: hidden;
+  transition: height 0.4s;
+}
+
+.about-link-hover-transition:hover::before {
+  height: 1.5rem;
+}
+
+.blog-link-hover-transition {
+  position: relative;
+}
+
+.blog-link-hover-transition::before {
+  content: 'Blog';
+  display: block;
+  position: absolute;
+  top: -0.14rem;
+  left: -0.24rem;
+  z-index: 40;
+  height: 0rem;
+	width: 2.8rem;
+	font-size: 1.1rem;
+  line-height: 1.6rem;
+  color: #fff;
+  background: #222;
+  overflow: hidden;
+  transition: height 0.4s;
+}
+
+.blog-link-hover-transition:hover::before {
+  height: 1.6rem;
+}
+
+.contact-link-hover-transition {
+  position: relative;
+}
+
+.contact-link-hover-transition::before {
+  content: 'Contact';
+  display: block;
+  position: absolute;
+  top: -0.14rem;
+  left: -0.24rem;
+  z-index: 40;
+  height: 0rem;
+	width: 4rem;
+	font-size: 1.1rem;
+  line-height: 1.6rem;
+  color: #fff;
+  background: #222;
+  overflow: hidden;
+  transition: height 0.4s;
+}
+
+.contact-link-hover-transition:hover::before {
+  height: 1.6rem;
+}
+
+
+
+/*********** END LINK HOVER STATES ************/
+
+
+
+
+
+
 
 .layout-main {
   position: absolute;
@@ -1140,6 +1327,11 @@ h1::after {
   width: 60%;
 }
 
+/* This is the style that should fix safari... */
+.layout-main {
+  background: #fff;
+}
+
 .layout-main::after {
   content: "";
   display: block;
@@ -1150,23 +1342,6 @@ h1::after {
   clip-path: polygon(0 0, 0 100%, 50% 100%, 50% 0);
   background: black;
 }
-
-/* .layout-header::before {
-  content: attr(data-title);
-  display: flex;
-  margin: auto;
-  position: absolute;
-  z-index: 12;
-  top: 0;
-  left: 0;
-  height: 24rem;
-  width: 60vw;
-  letter-spacing: 0.4rem;
-  color: #fff;
-  font-size: 2.4rem;
-  clip-path: polygon(0 0, 0 100%, 100vw 100%, calc(100vw - 85%) 0);
-  background: limegreen;
-} */
 
 h1 {
   position: absolute;
@@ -1210,23 +1385,17 @@ h1 {
 
 
 
-/* .header-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10rem;
-  width: 14rem;
-  font-family: 'Roboto Condensed', sans-serif;
-} */
 
-/******* MESSING WITH THE ANIMATED SVG BORDER **********/
+
+
+/******* LEARN MORE SVG BORDER STYLES **********/
+
 .svg-wrapper {
   min-width: 14.8rem;
   width: 14.8rem;
   margin: 0 auto;
   padding: 0;
   margin-top: 75vh;
-  /* background: limegreen; */
 }
 .svg-outline {
 	transform: translateY(1.6rem);
@@ -1235,22 +1404,18 @@ h1 {
   width: 14.8rem;
   margin: 0;
 	padding: 0.2rem;
-	/* background: blue; */
 }
 
 /* Mobile left border size */
 .shape {
 	stroke-dasharray: 90 355;
 	stroke-dashoffset: 17%;
-/*   stroke-dasharray: 90 340;
-  stroke-dashoffset: 40%; */
 	height: 50px;
 	min-width: 13.7em;
 	width: 13.7rem;
 	stroke-width: 4px;
 	fill: transparent;
 	stroke: #fff;
-/*   transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s; */
 }
 
 /* Mobile right border size */
@@ -1290,19 +1455,6 @@ h1 {
 	}
 }
 
-/* .svg-wrapper:hover .shape {
-  -webkit-animation: test 0.5s infinite;
-  animation: test 0.5s infinite;
-}
-
-@-webkit-keyframes test {
-    0% {stroke-dashoffset: 20%}
-}
-@keyframes test {
-    100% {stroke-dashoffset: 180%}
-} */
-
-
 .svg-wrapper:hover .shape {
   -webkit-animation: test 0.5s infinite;
   animation: test 0.8s infinite;
@@ -1329,15 +1481,15 @@ h1 {
     100% {stroke-dashoffset: 20%}
 }
 
-/* .shape2 {
-  stroke-dasharray: 180 200;
-  stroke-dashoffset: 10%;
-  stroke-width: 4px;
-  fill: transparent;
-  stroke: #19f6e8;
-  border-bottom: 4px solid black;
-  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
-} */
+
+
+/********** ENF OF LEARN MORE SVG BORDER STYLES ***********/
+
+
+
+
+
+
 .button-text {
   font-family: 'Roboto Condensed';
   font-size: 22px;
