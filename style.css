@@ -1221,24 +1221,26 @@ h1 {
 
 /******* MESSING WITH THE ANIMATED SVG BORDER **********/
 .svg-wrapper {
-  min-width: 18.5rem;
-  width: 18.5rem;
+  min-width: 14.8rem;
+  width: 14.8rem;
   margin: 0 auto;
   padding: 0;
   margin-top: 75vh;
   /* background: limegreen; */
 }
 .svg-outline {
-  transform: translateY(2rem);
-  height: 6rem;
-  min-width: 14.6rem;
-  width: 14.6rem;
+	transform: translateY(1.6rem);
+  height: 5.5rem;
+  min-width: 14.8rem;
+  width: 14.8rem;
   margin: 0;
-  padding: 0.3rem;
-  /* background: blue; */
+	padding: 0.2rem;
+	/* background: blue; */
 }
+
+/* Mobile left border size */
 .shape {
-	stroke-dasharray: 80 140;
+	stroke-dasharray: 90 355;
 	stroke-dashoffset: 17%;
 /*   stroke-dasharray: 90 340;
   stroke-dashoffset: 40%; */
@@ -1247,8 +1249,21 @@ h1 {
 	width: 13.7rem;
 	stroke-width: 4px;
 	fill: transparent;
-	stroke: #19f6e8;
+	stroke: #fff;
 /*   transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s; */
+}
+
+/* Mobile right border size */
+/* shape2 also inherits the above styles */
+/* and only overwrites where necessary */
+.shape2 {
+	stroke-dasharray: 100 355;
+	stroke-dashoffset: -145%;
+	stroke: #222;
+}
+
+.hide {
+	visibility: hidden;
 }
 
 @media (min-width: 542px) {
@@ -1257,20 +1272,25 @@ h1 {
 		/* background: red; */
 	}
 	.svg-outline {
-		transform: translateY(2.7rem);
+		transform: translateY(2.6rem);
+		height: 6rem;
 		min-width: 15rem;
 		padding: 0.2rem;
 	}
 	.shape {
-		stroke-dasharray: 120 160;
-	    stroke-dashoffset: 20%;
+		stroke-dasharray: 120 440;
+	  stroke-dashoffset: 20%;
 		transform: translateX(0.28rem);
 		min-width: 14.7rem;
 		height: 60px;
 	}
+	.shape2 {
+		stroke-dasharray: 120 440;
+		stroke-dashoffset: -140%;
+	}
 }
 
-.svg-wrapper:hover .shape {
+/* .svg-wrapper:hover .shape {
   -webkit-animation: test 0.5s infinite;
   animation: test 0.5s infinite;
 }
@@ -1280,17 +1300,35 @@ h1 {
 }
 @keyframes test {
     100% {stroke-dashoffset: 180%}
+} */
+
+
+.svg-wrapper:hover .shape {
+  -webkit-animation: test 0.5s infinite;
+  animation: test 0.8s infinite;
 }
 
-@media (min-width: 420px) {
-  .svg-outline {
-    width: 14rem;
-  }
-
-  .shape {
-    width: 14rem;
-  }
+.svg-wrapper:hover .shape2 {
+  -webkit-animation: test 0.5s infinite;
+  animation: test2 0.8s infinite;
 }
+
+@-webkit-keyframes test {
+    0% {stroke-dashoffset: 20%}
+}
+@keyframes test {
+    95% { stroke: black; }
+    100% {stroke-dashoffset: 180%}
+}
+
+@-webkit-keyframes test2 {
+    0% {stroke-dashoffset: -145%}
+}
+@keyframes test2 {
+    95% { stroke: #f2f2f2; }
+    100% {stroke-dashoffset: 20%}
+}
+
 /* .shape2 {
   stroke-dasharray: 180 200;
   stroke-dashoffset: 10%;
@@ -1312,17 +1350,17 @@ h1 {
 }
 .button-text::before {
   content: 'Learn';
-  display: inline-block;
+	display: inline-block;
+	width: 6rem;
   font-size: 1.4rem;
-  margin-right: 0.4rem;
   color: #f2f2f2;
   text-shadow: 0 0 0.7px, 0 0 0.3px;
 }
 .button-text::after {
   content: 'More';
   display: inline-block;
-  font-size: 1.4rem;
-  margin-left: 0.4rem;
+	font-size: 1.4rem;
+	width: 6rem;
   color: #222;
   text-shadow: 0 0 0.7px, 0 0 0.3px;
 }

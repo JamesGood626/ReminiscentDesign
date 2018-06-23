@@ -5,6 +5,7 @@
   <div class="svg-wrapper">
     <svg class="svg-outline" xmlns="http://www.w3.org/2000/svg">
       <rect class="shape" />
+      <rect class="shape shape2" />
       <div class="button-text"><span class="visually-hidden">Learn More</span></div>
     </svg>
   </div>
