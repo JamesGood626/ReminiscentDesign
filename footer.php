@@ -13,6 +13,8 @@
 
 	<!-- </div><! #content -->
 	</main>
+	
+<!-- This is where the admin bar comes from -->
 <?php wp_footer(); ?>
 
 </body>
