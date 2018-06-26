@@ -11,9 +11,10 @@
 
 ?>
 
-	<!-- </div><! #content -->
+	  <!-- </div>   -->
 	</main>
-	
+	<div class="left-transition-block"></div>
+	<div class="right-transition-block"></div>
 <!-- This is where the admin bar comes from -->
 <?php wp_footer(); ?>
 

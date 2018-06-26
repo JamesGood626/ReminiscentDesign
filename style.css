@@ -1009,6 +1009,16 @@ body {
   text-align: center;
 }
 
+h1 {
+	font-family: 'Comfortaa', cursive;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+  letter-spacing: 0.4rem;
+  color: black;
+  text-shadow: 0 0 4px, 0 0 2px;
+}
+
 .logo {
   position: absolute;
   top: 1.4rem;
@@ -1297,7 +1307,7 @@ nav {
   width: 100%;
 }
 
-h1::after {
+.front-page-h1::after {
   content: "Reminiscent";
   display: flex;
   margin: auto;
@@ -1317,7 +1327,7 @@ h1::after {
 }
 
 @media (min-width: 542px) {
-	h1::after {
+	.front-page-h1::after {
 		top: 0;
 	}
 }
@@ -1343,18 +1353,17 @@ h1::after {
   background: #000;
 }
 
-h1 {
+
+
+
+/******** FRONT PAGE H1 STYLES ***********/
+/* the rest cascade from the global h1 styles */
+
+.front-page-h1 {
   position: absolute;
-  top: calc(50% - 16rem);
-  font-family: 'Comfortaa', cursive;
-  font-size: 2.4rem;
-  font-weight: 700;
-  height: 7rem;
+	top: calc(50% - 16rem);
+	height: 7rem;
   width: 60vw;
-  line-height: 3.2rem;
-  letter-spacing: 0.4rem;
-  color: black;
-  text-shadow: 0 0 4px, 0 0 2px;
 }
 
 .header-text {
@@ -1382,6 +1391,9 @@ h1 {
   left: calc(100% - 29.8vw);
   writing-mode: vertical-lr;
 }
+
+
+/************ END FRONT PAGE H1 STYLES ***************/
 
 
 
@@ -1524,3 +1536,68 @@ h1 {
 .visually-hidden {
   display: none;
 }
+
+/************** TRANSITION DIV STYLES ****************/
+
+/* Fixes jank of elements on the page during page transition */
+.barba-container {
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+}
+
+.left-transition-block {
+	position: absolute;
+  z-index: 9001;
+  top: 0;
+  left: -100%;
+	height: 100vh;
+	width: 100vw;
+	background: #fff;
+}
+
+.right-transition-block {
+	position: absolute;
+  z-index: 9002;
+	top: 0;
+	left: 100%;
+	height: 100vh;
+	width: 100vw;
+	background: #000;
+}
+
+/************ TRANSITION DIV STYLES END **************/
+
+
+/************ SECONDARY PAGE H1 STYLES (about, blog, contact) **************/
+/* The rest of the styles cascade from the global h1 styles */
+
+.white-h1-background {
+  margin-top: 7rem;
+	height: 5.4rem;
+	width: 25vw;
+	background: #fff;
+  box-shadow: 1px 7px 1px 4px #000;
+}
+
+.white-h1-background > h1 {
+	width: 25vw;
+}
+
+.black-h1-background {
+  margin-top: 7rem;
+	height: 5.4rem;
+	width: 25vw;
+	background: #000;
+  box-shadow: 0px 4px 1px 4px #fff;
+}
+
+.black-h1-background > h1 {
+	color: #fff;
+	width: 25vw;
+}
+
+/* text shadow for white text */
+/* text-shadow: 0 0 6px, 0 0 3px; */

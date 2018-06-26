@@ -18,6 +18,10 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa:700|Sree+Krushnadevaraya" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 	<?php wp_head(); ?>
 </head>
 
@@ -28,13 +32,13 @@
 	<header>
 		<div class="nav-container">
 	      <nav>
-	        <span class="nav-link left-link"><a id="home" class="home-link-hover-transition" href="/">Home</a></span>
-	        <span class="nav-link left-link"><a id="about" class="about-link-hover-transition" href="/about">About</a></span>
-	        <span class="nav-link right-link"><a id="blog" class="blog-link-hover-transition" href="/blog">Blog</a></span>
-	        <span class="nav-link right-link"><a id="contact" class="contact-link-hover-transition" href="/contact">Contact</a></span>
+	        <span id="home" class="nav-link left-link"><a class="nav-anchor home-link-hover-transition" href="/">Home</a></span>
+	        <span id="about" class="nav-link left-link"><a class="nav-anchor about-link-hover-transition" href="/about">About</a></span>
+	        <span id="blog" class="nav-link right-link"><a class="nav-anchor blog-link-hover-transition" href="/blog">Blog</a></span>
+	        <span id="contact" class="nav-link right-link"><a class="nav-anchor contact-link-hover-transition" href="/contact">Contact</a></span>
 	      </nav>
 	    </div>
 	</header><!-- #masthead -->
-
-	<!-- <div id="content" class="site-content"> -->
-	<main class="layout-main">
+	 <!-- <div id="content" class="site-content">  -->
+	<main id="barba-wrapper" class="layout-main">
+		<!-- <div class="cc"> -->

@@ -1,9 +1,11 @@
 (function(pathname) {
+  console.log('nav-link-active running.');
   function addId(el) {
     var element = document.getElementById(el);
-    element.setAttribute('id', `${el}-link-is-active`);
+    var anchorTag = element.firstChild;
+    console.log('This is the element in nav-link-active IIFE: ', element);
+    anchorTag.setAttribute('id', `${el}-link-is-active`);
   }
-
   switch(pathname) {
     case '/':
       addId('home');

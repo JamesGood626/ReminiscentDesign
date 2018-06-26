@@ -15,12 +15,22 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
+	<main id="barba-wrapper" class="layout-main">
+		<div class="heading-container barba-container">
+			<h1 style="color: red;">PAGEEEEEEEEEEEEEEEEEEEEE</h1>
+		</div>
+	</main>
+<?php
+get_footer();
+?>
+
+<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
 
 		<!-- This is the cause of the lingering edit -->
-		<?php
+		<!--
+		php begin
 		while ( have_posts() ) :
 			the_post();
 
@@ -32,11 +42,10 @@ get_header();
 			endif;
 
 		endwhile; // End of the loop.
-		?>
+		php end-->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		<!--</main>--><!-- #main -->
+	<!--</div>--><!-- #primary -->
 
-<?php
-//get_sidebar();
-get_footer();
+
+<!--get_sidebar();-->
